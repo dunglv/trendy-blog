@@ -44,7 +44,7 @@
 			</div>
 			<div class="footer-bottom">
 				<div class="footer-bottom-left-whtree-agileinfo">
-					<p>&copy 2017 Trendy Blog. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts.</a></p>
+					<p>@if(\Auth::check()) <a href="{{ route('ui.user.logout') }}">Logout </a> | @endif Language: <a href="/vi">Vietnamese</a> | &copy 2017 Trendy Blog. All rights reserved | Template by <a href="http://w3layouts.com/">W3layouts.</a></p>
 				</div>
 				<div class="footer-bottom-right-whtree-agileinfo">
 					<ul>

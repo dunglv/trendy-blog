@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Trendy Blog - @yield('title', 'Blog about fashion')</title>
+    <title>@yield('title', 'Home') | Trendy Blog - Your world in your hand</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
     <script type="application/x-javascript">

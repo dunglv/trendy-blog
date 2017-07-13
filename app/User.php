@@ -26,4 +26,46 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function isAdmin()
+    {
+        if ($this->auth === 1) {
+            return true;
+        }
+        return false;
+    }
+    public function hasRole($role='')
+    {
+        if ($this->auth === 1) {
+            $r = 'admin';
+        }else if($this->auth === 2){
+            $r = 'user';
+        }else{
+            $r = 'guest';
+        }
+        return in_array($r, $role);
+    }
+    
+    public function isGuest()
+    {
+        if ($this->auth === 0) {
+            return true;
+        }
+        return false;
+    }
+    
+    public function articles()
+    {
+        return $this->hasMany('App\Article');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
+
+    public function events()
+    {
+        return $this->hasMany('App\Event');
+    }
 }
